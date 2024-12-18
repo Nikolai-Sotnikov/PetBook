@@ -1,19 +1,19 @@
 public class User {
-    private int ID;
+    private int id;
     private String name;
 
-    public User (int ID, String name){
-        this.ID = ID;
+    public User (int id, String name){
+        this.id = id;
         this.name = name;
     }
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
     public String getName() {
         return name;
     }
-    //@Override
+    ///@Override
     public String isPrint(){
-        return "Имя пользователя - " + name + ", ID - " + ID;
+        return "Имя пользователя - " + name + ", ID - " + id;
     }
 }

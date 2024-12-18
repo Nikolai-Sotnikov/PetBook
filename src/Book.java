@@ -1,38 +1,38 @@
 public class Book {
-    private int ID;
-    private String name;              //Название
+    private String Id;
+    private String title;             //Название
     private String author;            //Автор
-    private int yearPublication;      //Год издания
-    private boolean isAvailable;            //Статус (доступна/выдана)
+    private int year;                 //Год издания
+    private boolean isAvailable;      //Статус (доступна/выдана)
 
-    public Book(int ID, String name, String author, int yearPublication,String status){
-        this.ID = ID;
-        this.name = name;
+    public Book(String Id, String title, String author, int year){
+        this.Id = Id;
+        this.title = title;
         this.author = author;
-        this.yearPublication = yearPublication;
+        this.year = year;
         this.isAvailable = isAvailable;
     }
-    public int getID(){
-        return ID;
+    public String getId(){
+        return Id;
     }
-    public String getName(){
-        return name;
+    public String getTitle(){
+        return title;
     }
     public String getAuthor(){
         return author;
     }
-    public int getYearPublication() {
-        return yearPublication;
+    public int getYear() {
+        return year;
     }
-    public boolean getIsAvailable(){
+    public boolean isAvailable(){
         return isAvailable;
     }
     public void setAvailable(boolean available){
         isAvailable = available;
     }
-    //@Override
+    ///@Override
     public String isPrint(){
-        return "Название книги - " + name + ", Автор - " + author + ", Год издания - "
+        return "Название книги - " + title + ", Автор - " + author + ", Год издания - "
                 + ", Статус - " + (isAvailable ? " Выдана" : " Достпупна");
     }
 }

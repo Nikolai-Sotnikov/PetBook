@@ -15,4 +15,32 @@ public class Library {
     public void addUser(User user){
         users.add(user);
     }
+    public void borrowBook(String bookId,String userId){
+        for (Book book : books){
+            if (book.getId().equals(bookId) && book.isAvailable()){
+                book.setAvailable(false);
+                System.out.println("Книга взята: " + book.getTitle() + " Пользователь: " + userId);
+            return;
+            }
+        }
+        System.out.println("Книга недоступна или не существует.");
+    }
+    public void returnBook(String bookId){
+        for (Book book : books) {
+            if (book.getId().equals(bookId) && !book.isAvailable()) {
+                book.setAvailable(true);
+                System.out.println("Книга возвращена: " + book.getTitle());
+                return;
+            }
+        }
+        System.out.println("Эта книга не была заимствована");
+    }
+    public void listAvailableBooks(){
+        System.out.println("Доступные книги: ");
+        for (Book book : books){
+            if (book.isAvailable()){
+                System.out.println("Книги");
+            }
+        }
+    }
 }
