@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class LibrarySystem {
     public static void main(String[] args) {
         Library library = new Library();
@@ -11,10 +10,12 @@ public class LibrarySystem {
         library.addBook(new Book("4", "Bob", "", 2001));
 
         while (true){
+            System.out.println("Выбор задачи.");
             System.out.println("1. Список доступных книг");
             System.out.println("2. Взять книгу напрокат");
             System.out.println("3. Вернуть книгу");
             System.out.println("4. Выход");
+            System.out.print("Введите число: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
 

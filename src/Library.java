@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class Library {
     private List<Book> books;
     private List<User> users;
@@ -18,7 +17,7 @@ public class Library {
     public void borrowBook(String bookId,String userId){
         for (Book book : books){
             if (book.getId().equals(bookId) && book.isAvailable()){
-                book.setAvailable(false);
+                book.setAvailable(true);
                 System.out.println("Книга взята: " + book.getTitle() + " Пользователь: " + userId);
             return;
             }

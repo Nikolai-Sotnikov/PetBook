@@ -30,8 +30,7 @@ public class Book {
     public void setAvailable(boolean available){
         isAvailable = available;
     }
-    ///@Override
-    public String isPrint(){
+    public String isString(){
         return "Название книги - " + title + ", Автор - " + author + ", Год издания - "
                 + ", Статус - " + (isAvailable ? " Выдана" : " Достпупна");
     }
